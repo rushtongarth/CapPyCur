@@ -29,7 +29,7 @@ class capProj(object):
 		self.name = name
 		self.usecrypt = usecrypt
 		self.loc = os.path.dirname(os.path.realpath(__file__)) if not loc else loc
-
+	#these two functions should be merged
 	def getinfo(self):
 		return cyp.CryptoPickle(cfg.storageinfo(keyuser='pickleUser',loc=self.loc))
 	def tokretr(self):
@@ -39,11 +39,10 @@ class capProj(object):
 		with open(self.loc,'r') as f:
 			tmp=f.read()
 		tmp = tmp.split('\n')
-		
 		return filter(lambda x: x.startswith(self.name),tmp)[0].split('@')[1]
 class redcurl(curlworker,capProj):
 	def __init__(self,proj,cyp=False,keyloc=None):
-		curlworker.__init__(self,"https://redcap.vanderbilt.edu/api/")
+		curlworker.__init__(self,"<redcap_api_page>")
 		capProj.__init__(self,proj,loc=keyloc,usecrypt=cyp)
 		self.output = "Nothing Found"
 	def _inputhandler(self,incoming):
@@ -105,7 +104,6 @@ class redcurl(curlworker,capProj):
 			data = {"fields":[],"fieldnames":[]}
 		recs = self.pullrec(recs,style='csv',fields=data['fields'])
 		buff = StringIO(recs)
-		#buff = sio(recs)
 		if len(data['fieldnames']):
 			reader = csv.DictReader(buff,data['fieldnames'],delimiter=delim)
 		else:
