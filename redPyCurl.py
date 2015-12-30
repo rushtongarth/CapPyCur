@@ -36,6 +36,7 @@ class capProj(object):
 		if self.usecrypt:
 			_cp = self.getinfo()
 			return _cp.fread()[self.name]
+		#this is the old way of doing this...
 		with open(self.loc,'r') as f:
 			tmp=f.read()
 		tmp = tmp.split('\n')
@@ -61,7 +62,6 @@ class redcurl(curlworker,capProj):
 		return self.output
 	def fieldnames(self):
 		return map(itemgetter('field_name'),self.metagrab('json'))
-#	def pullreport
 	def pullform(self,recno,forms,style='json'):
 		dat = [('token',self.tokretr()),('content','record'),('format',style),('action','export')]
 		recno = self._inputhandler(recno)
