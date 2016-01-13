@@ -43,10 +43,10 @@ from capper import CapProj
 			#tmp=f.read()
 		#tmp = tmp.split('\n')
 		#return filter(lambda x: x.startswith(self.name),tmp)[0].split('@')[1]
-class redcurl(CurlWorker,capProj):
-	def __init__(self,proj,usercrypt=None,keyloc=None):
-		CurlWorker.__init__(self,"<redcap_api_page>")
-		capProj.__init__(self,proj,loc=keyloc,usecrypt=cyp)
+class redcurl(CurlWorker,CapProj):
+	def __init__(self,proj,cappage,usercrypt=None,keyloc=None):
+		CurlWorker.__init__(self,cappage)
+		CapProj.__init__(self,proj,loc=keyloc,usercrypt=usercrypt)
 		self.output = ""
 	def _inputhandler(self,incoming):
 		if isinstance(incoming,list):

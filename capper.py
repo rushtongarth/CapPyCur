@@ -1,7 +1,8 @@
 
 import os
-from cryptopickle import CryptoPickle
-from cryptopickle import config
+
+from cryptoPickle import CryptoPickle
+from cryptoPickle import config
 
 
 class CapProj(object):
@@ -17,6 +18,6 @@ class CapProj(object):
 		self.loc = os.path.dirname(os.path.realpath(__file__)) if not loc else loc
 
 	def tokretr(self):
-		cfg = config.storageinfo(keyuser=self.usercrypt,loc=self.loc))
+		cfg = config.storageinfo(keyuser=self.usercrypt,loc=self.loc)
 		_cp = CryptoPickle(cfg)
 		return _cp.fread()[self.name]
