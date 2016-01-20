@@ -1,1 +1,2 @@
-# CurlyCap
+# CapPyCurl
+Pronounced as "cappy curl"
