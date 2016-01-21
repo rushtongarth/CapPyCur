@@ -1,8 +1,8 @@
 
 import os
 
-from cryptoPickle import CryptoPickle
-from cryptoPickle import config
+from CryptoPickle import CryptoPickle
+from CryptoPickle import config
 
 
 class CapProj(object):
@@ -19,5 +19,5 @@ class CapProj(object):
 
 	def tokretr(self):
 		cfg = config.storageinfo(keyuser=self.usercrypt,loc=self.loc)
-		_cp = CryptoPickle(cfg)
+		_cp = CryptoPickle(cfg())
 		return _cp.fread()[self.name]
