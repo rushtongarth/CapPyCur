@@ -19,5 +19,5 @@ class CurlWorker(object):
 		ostr=buf.getvalue()
 		buf.close()
 		return ostr
-	def __exit__(self):
+	def exit(self):
 		self.c.close()
