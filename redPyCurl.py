@@ -1,48 +1,13 @@
 #!/usr/env python
 
 
-#import pycurl,json
 import os,json
 from cStringIO import StringIO
 from operator import itemgetter
 from fetcher import CurlWorker
 from capper import CapProj
-#from cryptopickle import cryptopickle as cyp,config as cfg
 
-#class curlworker(object):
-#	def __init__(self,page):
-#		self.c = pycurl.Curl()
-#		self.opt = self.c.setopt
-#		self.opt(pycurl.URL,page)
-#	def loader(self,dat):
-#		assert(type(dat)==type([]))
-#		self.opt(pycurl.HTTPPOST,dat)
-#	def grab(self):
-#		buf = StringIO()
-#		self.opt(pycurl.WRITEDATA,buf)
-#		self.c.perform()
-#		ostr=buf.getvalue()
-#		buf.close()
-#		return ostr
-#	def alldone(self):
-#		self.c.close()
-#class capProj(object):
-	#def __init__(self,name,loc = None,usecrypt = False):
-		#self.name = name
-		#self.usecrypt = usecrypt
-		#self.loc = os.path.dirname(os.path.realpath(__file__)) if not loc else loc
-	##these two functions should be merged
-	#def getinfo(self):
-		#return cyp.CryptoPickle(cfg.storageinfo(keyuser='pickleUser',loc=self.loc))
-	#def tokretr(self):
-		#if self.usecrypt:
-			#_cp = self.getinfo()
-			#return _cp.fread()[self.name]
-		##this is the old way of doing this...
-		#with open(self.loc,'r') as f:
-			#tmp=f.read()
-		#tmp = tmp.split('\n')
-		#return filter(lambda x: x.startswith(self.name),tmp)[0].split('@')[1]
+
 class redcurl(CurlWorker,CapProj):
 	def __init__(self,proj,cappage,usercrypt=None,keyloc=None):
 		CurlWorker.__init__(self,cappage)
