@@ -1,28 +1,15 @@
 #!/usr/env python
 
 
-<<<<<<< HEAD
-=======
 import pycurl
->>>>>>> origin/dev
 import os,json
 from cStringIO import StringIO
 from operator import itemgetter
 from fetcher import CurlWorker
-<<<<<<< HEAD
-from capper import CapProj
-
-
-class redcurl(CurlWorker,CapProj):
-	def __init__(self,proj,cappage,usercrypt=None,keyloc=None):
-=======
-
-
-
 
 class RedCurl(CurlWorker):
 	def __init__(self,cappage,token=''):
->>>>>>> origin/dev
+
 		CurlWorker.__init__(self,cappage)
 		self.output = ""
 		self.t = token
