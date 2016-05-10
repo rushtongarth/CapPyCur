@@ -1,6 +1,4 @@
 # CapPyCurl
-<<<<<<< HEAD
-Pronounced as "cappy curl"
 =======
 ## Basic Usage
     >>> import os
@@ -14,4 +12,3 @@ Pronounced as "cappy curl"
     >>> rc.exit()
     >>> print s
     ... Your Metadata ...
->>>>>>> origin/dev
