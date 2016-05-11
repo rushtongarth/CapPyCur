@@ -4,7 +4,7 @@
     >>> import os
     >>> from CapPyCurl.redPyCurl import redcurl
     >>> user = os.getenv("USER")
-    >>> proj = "<your project key name (see CryptoPickle)>"
+    >>> proj = "<your project API token name>"
     >>> page = "<your api URL>"
     >>> locn = os.getcwd()
     >>> rc = redcurl(proj,page,usercrypt=user,keyloc=locn)
