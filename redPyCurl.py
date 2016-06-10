@@ -128,11 +128,12 @@ class RedCurl(CurlWorker):
 		return self.output
 	def pushrec(self,recno,token='',**kwargs):
 		"""
-		pushrec - push Redcap records
+		pushrec - push Redcap record
 		
-		:param recno: record(s) to push data to
-		:param kwargs: dictionary whose keys are fields and 
-			values are the data to upload
+		:param recno: record to push data to 
+			N.B. This is currently implemented for a single record!
+		:param kwargs: dictionary whose keys are fieldnames and 
+			values are the data to upload to said fields
 		:param token: API token (if not provided earlier)
 		:return: server response
 		"""
@@ -149,11 +150,12 @@ class RedCurl(CurlWorker):
 		self.output = self.grab()
 		return self.output
 
-	def fullpull(self,delim=',',recs=[],token=''):
+	def fullpull(self,delim=',',recno='',token=''):
 		"""
 		fullpull - pull all fields for specified records
 		
-		:param delim: how to separate fields
+		:param delim: how to output fields are to be separated
+		:param recno: records to pull, defaults to all records
 		:param token: API token (if not provided earlier)
 		:return: all fields for the records specified
 		"""
@@ -162,7 +164,9 @@ class RedCurl(CurlWorker):
 			self.t = self.gettoken()
 		import csv
 		data = {"fields":[],"fieldnames":[]}
-		recs = self.pullrec(recs,style='csv',fields=data['fields'])
+		if not recno:
+			recno=[]
+		recs = self.pullrec(recno,style='csv',fields=data['fields'])
 		buff = StringIO(recs)
 		if len(data['fieldnames']):
 			reader = csv.DictReader(buff,data['fieldnames'],delimiter=delim)
@@ -176,7 +180,13 @@ class RedCurl(CurlWorker):
 		"""
 		pushfile - upload a file
 		
-		recno,fieldname,localname,rcname,pid=None,token=''
+		:param recno: record to push data to 
+			N.B. This is currently implemented for a single record!
+		:param fieldname: field to upload the file to
+		:param localname: full path to file that is to be uploaded
+		:param rcname: name of the file as it should appear on redcap
+		:param pid: project id, only necessary if the redcap project is longitudinal
+		:param token: API token (if not provided earlier)
 		"""
 		if not self.t:
 			self.t = self.gettoken()
