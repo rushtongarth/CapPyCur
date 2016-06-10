@@ -1,1 +1,1 @@
-from redPyCurl import RedCurl
+from CapPyCurl.RedCurl import RedCurl

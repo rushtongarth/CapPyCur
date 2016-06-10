@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>CapPyCurl Documentation &mdash; CapPyCurl 1.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="CapPyCurl 1.0.0 documentation" href="index.html" />
+    <link rel="prev" title="Welcome to CapPyCurl’s documentation!" href="index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="cappycurl-documentation">
+<h1>CapPyCurl Documentation<a class="headerlink" href="#cappycurl-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="redcurl">
+<h2><code class="xref py py-mod docutils literal"><span class="pre">RedCurl</span></code><a class="headerlink" href="#redcurl" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="RedCurl.RedCurl">
+<em class="property">class </em><code class="descclassname">RedCurl.</code><code class="descname">RedCurl</code><span class="sig-paren">(</span><em>cappage</em>, <em>token=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/RedCurl/redPyCurl.html#RedCurl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#RedCurl.RedCurl" title="Permalink to this definition">¶</a></dt>
+<dd><p>RedCurl -</p>
+<p>A class for talking to redcap with pycurl</p>
+<dl class="method">
+<dt id="RedCurl.RedCurl.deltoken">
+<code class="descname">deltoken</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/RedCurl/redPyCurl.html#RedCurl.deltoken"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#RedCurl.RedCurl.deltoken" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the token from locals</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="RedCurl.RedCurl.fieldnames">
+<code class="descname">fieldnames</code><span class="sig-paren">(</span><em>style='json'</em>, <em>token=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/RedCurl/redPyCurl.html#RedCurl.fieldnames"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#RedCurl.RedCurl.fieldnames" title="Permalink to this definition">¶</a></dt>
+<dd><p>fieldnames - get fieldnames from metadata</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>style</strong> &#8211; format to return from redcap, defaults to json</li>
+<li><strong>token</strong> &#8211; API token (if not provided earlier)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">redcap project metadata</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="RedCurl.RedCurl.fullpull">
+<code class="descname">fullpull</code><span class="sig-paren">(</span><em>delim='</em>, <em>'</em>, <em>recno=''</em>, <em>token=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/RedCurl/redPyCurl.html#RedCurl.fullpull"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#RedCurl.RedCurl.fullpull" title="Permalink to this definition">¶</a></dt>
+<dd><p>fullpull - pull all fields for specified records</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>delim</strong> &#8211; how to output fields are to be separated</li>
+<li><strong>recno</strong> &#8211; records to pull, defaults to all records</li>
+<li><strong>token</strong> &#8211; API token (if not provided earlier)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">all fields for the records specified</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="RedCurl.RedCurl.gettoken">
+<code class="descname">gettoken</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/RedCurl/redPyCurl.html#RedCurl.gettoken"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#RedCurl.RedCurl.gettoken" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">API token</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="RedCurl.RedCurl.metagrab">
+<code class="descname">metagrab</code><span class="sig-paren">(</span><em>style='json'</em>, <em>token=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/RedCurl/redPyCurl.html#RedCurl.metagrab"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#RedCurl.RedCurl.metagrab" title="Permalink to this definition">¶</a></dt>
+<dd><p>metagrab - grab project metadata</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>style</strong> &#8211; format to return from redcap, defaults to json</li>
+<li><strong>token</strong> &#8211; API token (if not provided earlier)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">redcap project metadata</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="RedCurl.RedCurl.pullform">
+<code class="descname">pullform</code><span class="sig-paren">(</span><em>recno</em>, <em>forms</em>, <em>style='json'</em>, <em>token=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/RedCurl/redPyCurl.html#RedCurl.pullform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#RedCurl.RedCurl.pullform" title="Permalink to this definition">¶</a></dt>
+<dd><p>pullform - pull a Redcap form for a record</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>recno</strong> &#8211; record(s) to query</li>
+<li><strong>forms</strong> &#8211; form(s) to pull</li>
+<li><strong>style</strong> &#8211; format to return from redcap, defaults to json</li>
+<li><strong>token</strong> &#8211; API token (if not provided earlier)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">form for the record(s) you asked for</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="RedCurl.RedCurl.pullrec">
+<code class="descname">pullrec</code><span class="sig-paren">(</span><em>recno</em>, <em>style='json'</em>, <em>fields=None</em>, <em>token=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/RedCurl/redPyCurl.html#RedCurl.pullrec"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#RedCurl.RedCurl.pullrec" title="Permalink to this definition">¶</a></dt>
+<dd><p>pullrec - pull Redcap records</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>recno</strong> &#8211; record(s) to query</li>
+<li><strong>style</strong> &#8211; format to return from redcap, defaults to json</li>
+<li><strong>fields</strong> &#8211; field(s) to pull, defaults to all</li>
+<li><strong>token</strong> &#8211; API token (if not provided earlier)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Fields from the list of records</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="RedCurl.RedCurl.pushfile">
+<code class="descname">pushfile</code><span class="sig-paren">(</span><em>recno</em>, <em>fieldname</em>, <em>localname</em>, <em>rcname</em>, <em>pid=None</em>, <em>token=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/RedCurl/redPyCurl.html#RedCurl.pushfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#RedCurl.RedCurl.pushfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>pushfile - upload a file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>recno</strong> &#8211; record to push data to 
+N.B. This is currently implemented for a single record!</li>
+<li><strong>fieldname</strong> &#8211; field to upload the file to</li>
+<li><strong>localname</strong> &#8211; full path to file that is to be uploaded</li>
+<li><strong>rcname</strong> &#8211; name of the file as it should appear on redcap</li>
+<li><strong>pid</strong> &#8211; project id, only necessary if the redcap project is longitudinal</li>
+<li><strong>token</strong> &#8211; API token (if not provided earlier)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="RedCurl.RedCurl.pushrec">
+<code class="descname">pushrec</code><span class="sig-paren">(</span><em>recno</em>, <em>token=''</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/RedCurl/redPyCurl.html#RedCurl.pushrec"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#RedCurl.RedCurl.pushrec" title="Permalink to this definition">¶</a></dt>
+<dd><p>pushrec - push Redcap record</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>recno</strong> &#8211; record to push data to 
+N.B. This is currently implemented for a single record!</li>
+<li><strong>kwargs</strong> &#8211; dictionary whose keys are fieldnames and 
+values are the data to upload to said fields</li>
+<li><strong>token</strong> &#8211; API token (if not provided earlier)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">server response</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="RedCurl.RedCurl.settoken">
+<code class="descname">settoken</code><span class="sig-paren">(</span><em>token</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/RedCurl/redPyCurl.html#RedCurl.settoken"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#RedCurl.RedCurl.settoken" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body">API token</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="RedCurl.RedCurl.token">
+<code class="descname">token</code><a class="headerlink" href="#RedCurl.RedCurl.token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Token property</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">CapPyCurl Documentation</a><ul>
+<li><a class="reference internal" href="#redcurl"><code class="docutils literal"><span class="pre">RedCurl</span></code></a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to CapPyCurl&#8217;s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/CapPyCurl.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Stephen Garth.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="_sources/CapPyCurl.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
