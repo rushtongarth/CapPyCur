@@ -1,5 +1,8 @@
 # CapPyCurl
 =======
+
+[Documentation](http://cappycurl.readthedocs.io/en/latest/)
+
 ## Basic Setup
     >>> from CapPyCurl import RedCurl
     >>> proj = "<your project API token>"
