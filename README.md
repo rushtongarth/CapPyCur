@@ -1,7 +1,7 @@
 # CapPyCurl
 =======
 
-[Documentation](http://cappycurl.readthedocs.io/en/latest/)
+[![Documentation Status](https://readthedocs.org/projects/cappycurl/badge/?version=latest)](http://cappycurl.readthedocs.io/en/latest/?badge=latest)
 
 ## Basic Setup
     >>> from CapPyCurl import RedCurl
