@@ -46,6 +46,7 @@ class RedCurl(CurlWorker):
 	def settoken(self, token):
 		"""settoken
 		
+		Set the API token value
 		:param: API token
 		"""
 		self.t = token
