@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # CapPyCurl documentation build configuration file, created by
-# sphinx-quickstart on Wed Jun 15 20:13:13 2016.
+# sphinx-quickstart on Thu Jun 16 10:22:57 2016.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
