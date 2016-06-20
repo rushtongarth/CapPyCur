@@ -46,3 +46,8 @@ coverage.xml
 
 # PyBuilder
 target/
+
+# Doc ignores
+_build
+_static
+_templates

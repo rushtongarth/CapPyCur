@@ -1,5 +1,8 @@
 # CapPyCurl
 =======
+
+[![Documentation Status](https://readthedocs.org/projects/cappycurl/badge/?version=latest)](http://cappycurl.readthedocs.io/en/latest/?badge=latest)
+
 ## Basic Setup
     >>> from CapPyCurl import RedCurl
     >>> proj = "<your project API token>"
@@ -19,4 +22,4 @@
     >>> md2 = rc2.metagrab()
     >>> print md2
     ... Your MetaData ...
-### More to come...
+#### More available in the quickstart guide on read the docs
